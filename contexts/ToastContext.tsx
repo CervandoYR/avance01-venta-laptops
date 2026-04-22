@@ -62,11 +62,10 @@ export function ToastProvider({ children }: { children: ReactNode }) {
     <ToastContext.Provider value={{ showToast, showAdminToast, showError }}>
       {children}
       
-      {/* ✅ CORRECCIÓN VISUAL:
-          1. style={{ zIndex: 99999 }}: Fuerza bruta para estar encima de todo.
-          2. top-24 md:top-32: Bajamos la notificación para que NO choque con el Navbar (que mide ~100px).
-             Ahora aparecerá flotando limpiamente debajo del encabezado.
+      {/*
+             Aparecerá la notificacion flotando limpiamente debajo del encabezado.
       */}
+
       <div 
         style={{ zIndex: 99999 }}
         className={`fixed top-24 md:top-32 right-4 md:right-6 transition-all duration-500 transform

@@ -13,7 +13,7 @@ interface AdminSearchFilterProps {
   placeholder?: string
   filterOptions?: {
     key: string
-    label: string // Título del filtro (ej: Categoría)
+    label: string // Título del filtro
     options: FilterOption[]
   }[]
 }

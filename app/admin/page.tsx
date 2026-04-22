@@ -11,10 +11,6 @@ export default async function AdminPage() {
   const ordersCount = await prisma.order.count()
   const usersCount = await prisma.user.count() // Contamos usuarios también
   
-  // Datos adicionales ocultos para este avance
-
-  // (Opcional) Calcular ingresos reales si deseas
-  // const income = await prisma.order.aggregate({ _sum: { total: true } })
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -31,7 +27,7 @@ export default async function AdminPage() {
 
       <h2 className="text-2xl font-bold mb-6 text-gray-800">Accesos Rápidos</h2>
       
-      {/* BOTONES DE GESTIÓN (Ahora son 5 columnas en PC grande) */}
+      {/* BOTONES DE GESTIÓN ( son 5 columnas en PC grande) */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
         
         {/* 1. Productos */}
@@ -60,7 +56,6 @@ export default async function AdminPage() {
 
       </div>
 
-      {/* Tabla de pedidos recientes oculta */}
     </div>
   )
 }

@@ -12,7 +12,7 @@ export default function AdminFloatingButton() {
   const isAdmin = (session?.user as any)?.role === 'ADMIN'
   const isProductPage = pathname?.includes('/productos/')
   
-  // ✅ NUEVO: Si ya estoy dentro del panel admin, no necesito el botón flotante
+  // NUEVO: Si ya estoy dentro del panel admin, no necesito el botón flotante
   const isInAdminPanel = pathname?.startsWith('/admin')
 
   const bottomPosition = isProductPage 

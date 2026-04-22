@@ -18,14 +18,14 @@ const POPULAR_BRANDS = [
   'Nvidia', 'Gigabyte', 'Epson', 'Canon', 'Brother', 'Xiaomi'
 ]
 
-// ✅ CATEGORÍAS (Base)
+// CATEGORÍAS (Base)
 const CATEGORIES = [
   'Laptops', 'PC Escritorio', 'Monitores', 
   'Componentes', 'Periféricos', 'Audio', 
   'Almacenamiento', 'Impresoras', 'Networking', 'Cables y Accesorios', 'Software'
 ]
 
-// ✅ SUGERENCIAS DE SPECS
+// SUGERENCIAS DE SPECS
 const COMMON_SPECS = [
   'Procesador', 'RAM', 'Almacenamiento', 'Pantalla', 'Tarjeta de Video', 
   'Batería', 'Sistema Operativo', 'Peso', 'Dimensiones', 'Color', 
@@ -325,7 +325,7 @@ export function ProductForm({ product }: ProductFormProps) {
 
         {/* CLASIFICACIÓN (CATEGORÍA HÍBRIDA) */}
         <div className="grid md:grid-cols-4 gap-6">
-            {/* ✅ CATEGORÍA MEJORADA: INPUT + DROPDOWN */}
+            {/* CATEGORÍA MEJORADA: INPUT + DROPDOWN */}
             <div className="relative" ref={categoryWrapperRef}>
                 <label className="block text-sm font-bold mb-1 flex items-center gap-1 text-gray-700"><Tag className="w-3.5 h-3.5" /> Categoría</label>
                 <div className="relative">

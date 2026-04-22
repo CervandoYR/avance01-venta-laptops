@@ -95,7 +95,7 @@ export default async function HomePage({ searchParams }: PageProps) {
       
       <FloatingWhatsApp />
 
-      {/* ✅ HERO SECTION (Z-50): Más limpio, sin buscador (ahora está en el Navbar) */}
+      {/* HERO SECTION*/}
       <section className="bg-gradient-to-br from-gray-900 to-blue-900 text-white py-12 md:py-16 relative z-50">
         <div className="absolute inset-0 z-0 opacity-20 pointer-events-none mix-blend-overlay overflow-hidden">
             {siteConfig.heroImage && <Image src={siteConfig.heroImage} alt="Background" fill className="object-cover" priority />}
@@ -123,7 +123,7 @@ export default async function HomePage({ searchParams }: PageProps) {
         </div>
       </section>
 
-      {/* ✅ BENEFICIOS: Espaciado perfecto y sin superposición */}
+      {/* BENEFICIOS */}
       <BenefitsSection />
 
       {/* --- FILTROS RÁPIDOS (ESTÁTICOS) --- */}

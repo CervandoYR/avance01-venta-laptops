@@ -33,9 +33,7 @@ export const authOptions: NextAuthOptions = {
           throw new Error('Credenciales inválidas')
         }
 
-        // ---------------------------------------------------------
-        // 🪄 MAGIA: VINCULAR PEDIDOS DE INVITADO AL LOGUEARSE
-        // ---------------------------------------------------------
+        // VINCULAR PEDIDOS DE INVITADO AL LOGUEARSE
         try {
           // Buscamos pedidos que coincidan con ESTE correo pero que no tengan dueño (userId: null)
           await prisma.order.updateMany({
@@ -44,14 +42,13 @@ export const authOptions: NextAuthOptions = {
               userId: null               // Solo pedidos que eran de "invitado"
             },
             data: {
-              userId: user.id            // ¡Ahora le pertenecen a este usuario!
+              userId: user.id            // Ahora le pertenecen a este usuario
             }
           })
         } catch (error) {
           // Si esto falla, no detenemos el login, solo lo registramos (es un proceso secundario)
           console.error("Error vinculando pedidos antiguos:", error)
         }
-        // ---------------------------------------------------------
 
         return {
           id: user.id,

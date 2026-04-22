@@ -28,7 +28,7 @@ export default function ImageUpload({
     }
   }
 
-  // ✅ CORRECCIÓN: Esta función ahora se conecta a onSuccess
+  // CORRECCIÓN: Esta función ahora se conecta a onSuccess
   const onUploadSuccess = (result: any) => {
     // Verificamos que secure_url exista en el resultado
     if (result.info && result.info.secure_url) {
@@ -63,9 +63,9 @@ export default function ImageUpload({
           </div>
         ))}
         
-        {/* ✅ BOTÓN DE SUBIDA CORREGIDO */}
+        {/* BOTÓN DE SUBIDA */}
         <CldUploadWidget 
-            onSuccess={onUploadSuccess} // 👈 CAMBIO IMPORTANTE: onSuccess en lugar de onUpload
+            onSuccess={onUploadSuccess}
             uploadPreset="venta-laptops" 
             options={{ 
                 maxFiles: 1,

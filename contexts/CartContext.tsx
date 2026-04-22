@@ -15,7 +15,7 @@ interface CartContextType {
   items: CartItem[]
   itemCount: number
   cartTotal: number
-  addItem: (product: Product, quantity?: number) => Promise<boolean> // 👇 Ahora devuelve boolean (éxito/fallo)
+  addItem: (product: Product, quantity?: number) => Promise<boolean> // devuelve boolean (éxito/fallo)
   removeItem: (productId: string) => Promise<void>
   updateQuantity: (productId: string, quantity: number) => Promise<void>
   clearCart: () => Promise<void>
