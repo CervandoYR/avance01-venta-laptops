@@ -64,7 +64,7 @@ export default function RootLayout({
             {/* Nota: Kiro ya tiene su propio posicionamiento dentro del componente */}
             <KiroAssistant />
 
-            {/* 3. Botón Admin (Izquierda Abajo - Solo visible para ti) */}
+            {/* 3. Botón Admin (Izquierda Abajo - Solo visible para el admin) */}
             <AdminFloatingButton />
 
           </ToastProvider>
